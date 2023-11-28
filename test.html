@@ -1,14 +1,18 @@
 <h1>test</h1>
 
-<nav>
+<nav style="padding:20px;background:orange">
   <a href="/">Home</a>
   <a>Test</a>
 </nav>
 
 <script>
+  document.addEventListener('DOMContentLoaded', () => {
 
-  document.addEventListener('DOMContentLoaded', event => {
-    console.log('DOM fully loaded and parsed', event)
+    document.querySelector('nav').addEventListener('click', e => {
+      if (e.target.tagName !== 'A') return console.log('Not a element')
+      e.target.preventDefault()
+      console.log('Otvaram odkaz', e.target.getAttribute('href'))
+    })
+    
   })
-
 </script>
