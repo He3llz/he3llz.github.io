@@ -10,7 +10,7 @@
 
     document.querySelector('nav').addEventListener('click', e => {
       if (e.target.tagName !== 'A') return console.log('Not a element')
-      e.target.preventDefault()
+      e.preventDefault()
       console.log('Otvaram odkaz', e.target.getAttribute('href'))
     })
     
